@@ -1,9 +1,4 @@
-Version 0.1.0 11-11-2025
-
-This version of CookingBTB brings the first wave of connectivity to the Alpha
-testing stage of the app. A blue gradient was chosen for the temporary
-background, a logo and corresponding color template will be in a future update.
-Minor updates to usability:
+Pre release - latest features added 01/05/2026
 
     A new interactive dropdown to select your Status relating to the cooking process: Creating a recipe, Shopping for ingredients, Cooking the food, Eating and reviewing the recipe.
 
