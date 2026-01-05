@@ -39,8 +39,12 @@ final class LocalSearchService: ObservableObject {
                 self?.results = response.mapItems.compactMap { item in
                     let coordinate = item.location.coordinate
                     let displayName: String = {
-                        if let name = item.name, !name.isEmpty { return name }
-                        if let address = item.address { return address.description }
+                        if let name = item.name, !name.isEmpty {
+                            return name
+                        }
+                        if let address = item.address {
+                            return address.description
+                        }
                         return "Unknown"
                     }()
                     

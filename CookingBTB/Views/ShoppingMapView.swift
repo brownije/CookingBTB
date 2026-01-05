@@ -29,8 +29,23 @@ struct ShoppingMapView: View {
     var body: some View {
         VStack {
             if let coordinate = locationManager.currentLocation?.coordinate {
-                Map(coordinateRegion: $region, annotationItems: searchService.results) { place in
-                    MapMarker(coordinate: place.coordinate, tint: .green)
+                Map(initialPosition: .region(region)) {
+                    // Show the user's location
+                    UserAnnotation()
+                    
+                    // Annotations for search results
+                    ForEach(searchService.results) { place in
+                        Annotation(place.name, coordinate: place.coordinate) {
+                            ZStack {
+                                Circle()
+                                    .fill(Color.green)
+                                    .frame(width: 24, height: 24)
+                                Image(systemName: "cart")
+                                    .foregroundStyle(.white)
+                                    .font(.system(size: 12, weight: .bold))
+                            }
+                        }
+                    }
                 }
                 .onAppear {
                     region.center = coordinate
