@@ -20,7 +20,7 @@ Bug Fixes:
 - Color of Help and Open button make them hard to see
 
 Upcoming:
-- Shopping opens up nearby grocery store
+- Shopping opens up nearby grocery store that contains items in list
 - Create prompts to create a Recipe with sections:
     - TITLE, EST. TIME, SERVES, INGREDIENTS, STEPS, RATING
 - Cooking prompts to display a previously created Recipe
